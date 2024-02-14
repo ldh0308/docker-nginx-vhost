@@ -43,7 +43,7 @@ server {
 
 # Step #4
 ```
-$ sudo docker exec -it lb bash
+$ sudo docker exec -it lb bash // 서버접속
 root@c625f68dae89:/# cd /etc/nginx/
 root@c625f68dae89:/etc/nginx# ls
 conf.d  fastcgi_params  mime.types  modules  nginx.conf  scgi_params  uwsgi_params
@@ -59,6 +59,7 @@ lrwxrwxrwx 1 root root   22 Oct 24 16:10 modules -> /usr/lib/nginx/modules
 
 $sudo docker cp config/default.conf lb:/etc/nginx/conf.d/
 
+//serv-a, b 인덱스 파일 복사하기
 $ sudo docker cp serv-a/index.html serv-a:usr/share/nginx/html/
 $ sudo docker cp serv-b/index.html serv-b:usr/share/nginx/html/
 
