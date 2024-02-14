@@ -76,6 +76,7 @@ $ sudo docker logs lb // 로그 보기 증상과 로그 기록(전체)
 $ apt install telnet
 ```
 # Step #6 (network)
+```bash
 $ sudo docker network ls
 
 $ sudo docker network create s1s2
@@ -83,6 +84,7 @@ $ sudo docker network create s1s2
 $ sudo docker network inspect s1s2
 
 $ sudo docker network connect s1s2 s1
+```
 # Step #7 (8001 포트로만 접속하기)
 ```bash
 $ sudo docker stop lb
