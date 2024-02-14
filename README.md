@@ -78,6 +78,9 @@ $ apt install telnet
 # Step #6 (network)
 $ sudo docker network ls
 
+$ sudo docker network create s1s2
+
+$ sudo docker network inspect s1s2
 # Step #7 (8001 포트로만 접속하기)
 ```bash
 $ sudo docker stop lb
