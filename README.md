@@ -79,6 +79,7 @@ $ apt install telnet
 $ sudo docker network ls
 
 # Step #7 (8001 포트로만 접속하기)
+```bash
 $ sudo docker stop lb
 
 $ sudo docker stop serv-a
@@ -100,6 +101,7 @@ $ sudo docker network connect ablb serv-a
 $ sudo docker network connect ablb serv-b
 
 $ sudo docker restart lb
+```
 
 ### Ref
 https://github.com/pySatellite/docker-nginx-vhost
