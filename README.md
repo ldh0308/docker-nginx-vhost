@@ -19,5 +19,25 @@ $ sudo docker run -itd -p 8003:80 --name serv-b nginx
 $ sudo docker run -itd -p 8001:80 --name lb nginx:latest
 ```
 
+# Setp #3
+mkdir config
+cd config
+vi default.conf
+```
+upstream serv {
+    server serv-a:80;
+    server serv-p:80;
+}
+server {
+    listen 80;
+
+    location /
+    {
+        proxy_pass http://serv;
+    }
+}%
+```
+
+
 ### Ref
 https://github.com/pySatellite/docker-nginx-vhost
