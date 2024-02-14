@@ -81,6 +81,8 @@ $ sudo docker network ls
 $ sudo docker network create s1s2
 
 $ sudo docker network inspect s1s2
+
+$ sudo docker network connect s1s2 s1
 # Step #7 (8001 포트로만 접속하기)
 ```bash
 $ sudo docker stop lb
@@ -88,12 +90,11 @@ $ sudo docker stop lb
 $ sudo docker stop serv-a
 $ sudo docker stop serv-b
 
-$ sudo docker rm serv-a
-$ sudo docker rm serv-b
-
-
 $ sudo docker commit serv-a ldh0308/serv-a:0.1.0  (스냅샷)
 $ sudo docker commit serv-b ldh0308/serv-b:0.1.0  (스냅샷)
+
+$ sudo docker rm serv-a
+$ sudo docker rm serv-b
 
 $ sudo docker run --name serv-a -d ldh0308/serv-a:0.1.0 //-p 옵션을 제외한다.
 $ sudo docker run --name serv-b -d ldh0308/serv-b:0.1.0
