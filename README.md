@@ -74,10 +74,10 @@ $ sudo docker ps | rev | cut -d' ' -f1 | rev
 $ sudo docker logs lb // 로그 보기 증상과 로그 기록(전체)
 
 $ apt install telnet
-
+```
 # Step #6 (network)
 $ sudo docker network ls
-```
+
 
 
 ### Ref
