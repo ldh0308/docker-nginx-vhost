@@ -64,7 +64,7 @@ $ sudo docker cp serv-a/index.html serv-a:usr/share/nginx/html/
 $ sudo docker cp serv-b/index.html serv-b:usr/share/nginx/html/
 
 ```
-
+$ sudo docker restart lb
 
 
 # Step #5
@@ -78,7 +78,28 @@ $ apt install telnet
 # Step #6 (network)
 $ sudo docker network ls
 
+# Step #7 (8001 포트로만 접속하기)
+$ sudo docker stop lb
 
+$ sudo docker stop serv-a
+$ sudo docker stop serv-b
+
+$ sudo docker rm serv-a
+$ sudo docker rm serv-b
+
+
+$ sudo docker commit serv-a ldh0308/serv-a:0.1.0  (스냅샷)
+$ sudo docker commit serv-b ldh0308/serv-b:0.1.0  (스냅샷)
+
+$ sudo docker run --name serv-a -d ldh0308/serv-a:0.1.0 //-p 옵션을 제외한다.
+$ sudo docker run --name serv-b -d ldh0308/serv-b:0.1.0
+
+$ sudo docker network inspect ablb
+
+$ sudo docker network connect ablb serv-a
+$ sudo docker network connect ablb serv-b
+
+$ sudo docker restart lb
 
 ### Ref
 https://github.com/pySatellite/docker-nginx-vhost
