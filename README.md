@@ -20,7 +20,7 @@ $ sudo docker run -itd -p 8003:80 --name serv-b nginx
 $ sudo docker run -itd -p 8001:80 --name lb nginx:latest
 ```
 
-# Setp #3
+# Step #3
 ```bash
 $ mkdir config
 $ cd config
@@ -40,6 +40,27 @@ server {
     }
 }
 ```
+
+# Step #4
+```
+donghyuk@lee  ~/code/docker-nginx-vhost   main  sudo docker exec -it lb bash
+[sudo] password for donghyuk:
+root@c625f68dae89:/# cd /etc/nginx/
+root@c625f68dae89:/etc/nginx# ls
+conf.d  fastcgi_params  mime.types  modules  nginx.conf  scgi_params  uwsgi_params
+root@c625f68dae89:/etc/nginx# ls -l
+total 32
+drwxr-xr-x 1 root root 4096 Feb 14 02:17 conf.d
+-rw-r--r-- 1 root root 1007 Oct 24 13:46 fastcgi_params
+-rw-r--r-- 1 root root 5349 Oct 24 13:46 mime.types
+lrwxrwxrwx 1 root root   22 Oct 24 16:10 modules -> /usr/lib/nginx/modules
+-rw-r--r-- 1 root root  648 Oct 24 16:10 nginx.conf
+-rw-r--r-- 1 root root  636 Oct 24 13:46 scgi_params
+-rw-r--r-- 1 root root  664 Oct 24 13:46 uwsgi_params
+
+$sudo docker cp config/default.conf lb:/etc/nginx/conf.d/
+```
+
 
 
 ### Ref
