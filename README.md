@@ -43,8 +43,7 @@ server {
 
 # Step #4
 ```
-donghyuk@lee  ~/code/docker-nginx-vhost   main  sudo docker exec -it lb bash
-[sudo] password for donghyuk:
+$ sudo docker exec -it lb bash
 root@c625f68dae89:/# cd /etc/nginx/
 root@c625f68dae89:/etc/nginx# ls
 conf.d  fastcgi_params  mime.types  modules  nginx.conf  scgi_params  uwsgi_params
