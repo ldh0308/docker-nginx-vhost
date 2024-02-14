@@ -38,7 +38,7 @@ server {
     {
         proxy_pass http://serv;
     }
-}%
+}
 ```
 
 
