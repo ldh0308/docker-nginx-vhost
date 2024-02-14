@@ -13,6 +13,7 @@ $ sudo docker ps -a
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 ```
 # Step #2
+컨테이너 3개 이미지 1개 생성
 ```
 $ sudo docker run -itd -p 8002:80 --name serv-a nginx
 $ sudo docker run -itd -p 8003:80 --name serv-b nginx
