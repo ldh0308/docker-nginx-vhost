@@ -107,5 +107,13 @@ $ sudo docker network connect ablb serv-b
 $ sudo docker restart lb
 ```
 
+# Step #8 작동확인
+![image](https://github.com/ldh0308/docker-nginx-vhost/assets/142721325/60d9ef17-0005-47a3-8d3f-1cab34c17b4e)
+![image](https://github.com/ldh0308/docker-nginx-vhost/assets/142721325/3bd16cd5-3569-48ea-8ac6-ef45e28993b0)
+![image](https://github.com/ldh0308/docker-nginx-vhost/assets/142721325/c739752e-e458-4a1c-a8b5-b7f5f32fe6d3)
+
+
+
+
 ### Ref
 https://github.com/pySatellite/docker-nginx-vhost
