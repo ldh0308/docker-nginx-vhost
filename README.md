@@ -59,7 +59,8 @@ lrwxrwxrwx 1 root root   22 Oct 24 16:10 modules -> /usr/lib/nginx/modules
 
 $sudo docker cp config/default.conf lb:/etc/nginx/conf.d/
 
-$ sudo docker cp serv-a/index.html ser v-a:usr/share/nginx/html/
+$ sudo docker cp serv-a/index.html serv-a:usr/share/nginx/html/
+$ sudo docker cp serv-b/index.html serv-b:usr/share/nginx/html/
 
 ```
 
