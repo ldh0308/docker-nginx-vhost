@@ -3,5 +3,10 @@
 
 
 
+
+
 # load-balancing
+https://www.nginx.com/resources/glossary/load-balancing/
+
+### Ref
 https://github.com/pySatellite/docker-nginx-vhost
