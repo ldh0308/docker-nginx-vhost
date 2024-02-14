@@ -25,7 +25,8 @@ $ sudo docker run -itd -p 8001:80 --name lb nginx:latest
 $ mkdir config
 $ cd config
 $ vi default.conf
-  
+
+//nginx 문법
 upstream serv {
     server serv-a:80;
     server serv-p:80;
