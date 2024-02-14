@@ -70,6 +70,8 @@ $ sudo docker cp serv-b/index.html serv-b:usr/share/nginx/html/
 
 $ sudo docker ps | rev | cut -d' ' -f1 | rev
 
+$ sudo docker logs lb // 로그 보기 증상과 로그 기록(전체)
+
 
 
 
