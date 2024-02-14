@@ -14,9 +14,9 @@ CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 ```
 # Step #2
 ```
-$ docker run -itd -p 8002:80 --name serv-a nginx
-$ docker run -itd -p 8003:80 --name serv-b nginx
-$ docker run -itd -p 8001:80 --name lb nginx:latest
+$ sudo docker run -itd -p 8002:80 --name serv-a nginx
+$ sudo docker run -itd -p 8003:80 --name serv-b nginx
+$ sudo docker run -itd -p 8001:80 --name lb nginx:latest
 ```
 
 ### Ref
