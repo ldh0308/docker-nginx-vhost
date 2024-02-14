@@ -20,9 +20,10 @@ $ sudo docker run -itd -p 8001:80 --name lb nginx:latest
 ```
 
 # Setp #3
-mkdir config
-cd config
-vi default.conf
+- mkdir config
+- cd config
+- vi default.conf
+- 
 ```
 upstream serv {
     server serv-a:80;
