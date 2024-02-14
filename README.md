@@ -58,7 +58,17 @@ lrwxrwxrwx 1 root root   22 Oct 24 16:10 modules -> /usr/lib/nginx/modules
 -rw-r--r-- 1 root root  664 Oct 24 13:46 uwsgi_params
 
 $sudo docker cp config/default.conf lb:/etc/nginx/conf.d/
+
+$ sudo docker cp serv-a/index.html ser v-a:usr/share/nginx/html/
+
 ```
+
+
+
+# Step #5
+
+$ sudo docker ps | rev | cut -d' ' -f1 | rev
+
 
 
 
